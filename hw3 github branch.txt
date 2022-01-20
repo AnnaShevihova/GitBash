@@ -1,0 +1,87 @@
+GitHub. HW_2
+
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+
+git branch
+git branch Postman
+git branch Jmeter
+git branch CheckLists
+git branch Bag_Reports
+git branch SQL
+git branch Charles
+git branch Mobile_testing
+
+
+2. Запушить все ветки на внешний репозиторий
+
+git add .
+git commit -m "homework"
+git push -u origin Postman Jmeter CheckLists Bag_Reports SQL Charles Mobile_testing
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+
+git checkout Bag_Reports
+vim bag_r6.txt
+Summary: Login: Error messages in the login form are displayed in English
+ Environment: All browsers
+ Severity: Major
+ Steps to reproduce:
+  1. Open front end website
+  2. Follow 'inloggen' link
+  3. Fill required fields with invalid data
+  4. Click 'inloggen' button
+  5. Pay attention to error messages
+ Actual result: Error messages in the login form are displayed in English
+ Expected result: Error messages in the login form are displayed in the chosen language
+ Attachment: Link to the website
+
+4. Запушить структуру багрепорта на внешний репозиторий
+
+git add .
+git commit -m 'test6'
+git push
+
+5. Вмержить ветку Bag Reports в Main
+
+git checkout main 
+git merge Bug_reports
+
+
+6. Запушить main на внешний репозиторий.
+
+git push
+
+7. В ветке CheckLists набросать структуру чек листа.
+
+git checkout CheckLists
+vim chek_l1.txt
+ ID     Tester Actions                        Actyal Result
+ 
+ 1    Registration on the website             Passed
+ 2    Authorization on the website            Passed
+ 3    Sending mail on the mailing list page   Bug
+
+8. Запушить структуру на внешний репозиторий
+
+git add .
+git commit -m 'chek1'
+git push
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
+В гитхабе зайти в репозиторий, выбрать TXT (папку, из которой выполнялось клонирование).
+На стронице в желтой строке будет предложение CheckLists вмержить в main, Compare&pull request.
+Нажимаем на нее. Вписываем коментарии. Нажимаем везде pull request.
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+
+В консоле
+git checkout main
+git pull
